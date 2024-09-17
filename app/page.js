@@ -1,4 +1,3 @@
-// Home.js
 'use client'
 import React, { useState, useEffect } from 'react';
 import { 
@@ -244,7 +243,7 @@ export default function Home() {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await axios.get('https://newsapi.org/v2/everything', {
+        const response = await axios.get('https://newsdata.io', {
           params: {
             q: 'health',
             apiKey: process.env.NEXT_PUBLIC_NEWS_API_KEY,
@@ -256,7 +255,7 @@ export default function Home() {
       } catch (error) {
         console.error('Error fetching articles:', error);
         setSnackbar({
-          open: true,
+          open: false,
           message: 'Failed to fetch articles. Please try again later.',
           severity: 'error'
         });
@@ -442,7 +441,7 @@ export default function Home() {
 
           <Box sx={{ mt: 6 }}>
             <Typography variant="h5" align="center" paragraph color="text.primary">
-              Latest Health Articles
+              
             </Typography>
             <Grid container spacing={4}>
               {articles.map((article, index) => (
