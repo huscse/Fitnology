@@ -394,7 +394,7 @@ export default function Home() {
                     </TextField>
                     <Button
                       variant="contained"
-                      color="secondary"
+                      color="#fffff"
                       type="submit"
                       fullWidth
                       sx={{ mt: 2 }}
